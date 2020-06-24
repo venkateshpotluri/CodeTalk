@@ -10,16 +10,18 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:codetalk.helloWorld"
+		"onLanguage:typescript"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "codetalk.helloWorld",
-				"title": "Hello World"
-			}
-		]
+		"views": {
+			"explorer": [
+				{
+					"id": "codetalk-summary.view",
+					"name": "CodeTalk File Summary"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -28,6 +30,9 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
 		"test": "node ./out/test/runTest.js"
+	},
+	"dependencies": {
+		"typescript": "^3.9.5"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.46.0",
@@ -39,7 +44,6 @@
 		"@typescript-eslint/eslint-plugin": "^2.30.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.1.2",
-		"typescript": "^3.8.3",
-		"vscode-test": "^1.3.0"
+				"vscode-test": "^1.3.0"
 	}
 }
