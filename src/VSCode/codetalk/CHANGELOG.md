@@ -7,3 +7,5 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 - Initial release
+- Attempting as close of a 1-to-1 conversion of original CodeTalk code as possible. Notable changes are:
+  - Use of vscode.Range in place of FileSpan.cs
